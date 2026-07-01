@@ -36,7 +36,7 @@ export default function AdminLayout({
         {/* 로고 */}
         <div className="p-6 border-b border-cloud/5">
           <Link href="/admin" className="flex items-center gap-3">
-            <span className="text-2xl">🐝</span>
+            <span className="text-2xl">📚</span>
             <div>
               <h1 className="font-serif text-sm font-bold text-cloud">
                 만화카페
@@ -95,7 +95,7 @@ export default function AdminLayout({
           <aside className="absolute left-0 top-0 bottom-0 w-64 bg-night text-cloud animate-slide-up flex flex-col">
             <div className="p-6 border-b border-cloud/5 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <span className="text-2xl">🐝</span>
+                <span className="text-2xl">📚</span>
                 <h1 className="font-serif text-sm font-bold">관리자</h1>
               </div>
               <button
@@ -147,7 +147,7 @@ export default function AdminLayout({
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
-          <span className="font-serif text-sm font-bold text-ink">🐝 관리자</span>
+          <span className="font-serif text-sm font-bold text-ink">📚 관리자</span>
           <div className="w-9" />
         </header>
 

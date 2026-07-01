@@ -36,12 +36,12 @@ export default function AdminLoginPage() {
         <div className="glass-dark rounded-2xl p-8 md:p-10 animate-fade-up">
           {/* 로고 */}
           <div className="text-center mb-8">
-            <span className="text-4xl block mb-3">🐝</span>
+            <span className="text-4xl block mb-3">📚</span>
             <h1 className="font-serif text-2xl font-bold text-cloud mb-1">
               관리자 로그인
             </h1>
             <p className="text-cloud/40 text-xs tracking-wider">
-              벌툰만화카페 경기인천점
+              만화카페 홈페이지 만들기 연습용
             </p>
           </div>
 

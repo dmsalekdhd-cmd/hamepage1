@@ -54,7 +54,7 @@ export default function Header() {
           {/* 로고 */}
           <Link href="/" className="flex items-center gap-3 group">
             <div className="relative">
-              <span className="text-3xl">🐝</span>
+              <span className="text-3xl">📚</span>
               <span className="absolute -top-1 -right-1 w-2 h-2 bg-gold rounded-full animate-pulse-soft" />
             </div>
             <div className="flex flex-col">

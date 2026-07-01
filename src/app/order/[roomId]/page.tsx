@@ -93,7 +93,7 @@ export default function OrderPage({ params }: { params: Promise<{ roomId: string
             으로 음식을 가져다 드리겠습니다
           </p>
           <p className="text-ink-light/60 text-xs mb-8">
-            잠시만 기다려 주세요 🐝
+            잠시만 기다려 주세요 📚
           </p>
           <div className="space-y-3">
             <Link
@@ -129,7 +129,7 @@ export default function OrderPage({ params }: { params: Promise<{ roomId: string
             <div>
               <h1 className="font-serif text-base font-bold text-ink">QR 주문</h1>
               <p className="text-[11px] text-gold-dark">
-                🐝 {roomNumber}번 방
+                📚 {roomNumber}번 방
               </p>
             </div>
           </div>
@@ -309,7 +309,7 @@ export default function OrderPage({ params }: { params: Promise<{ roomId: string
                   장바구니
                 </h2>
                 <p className="text-[11px] text-gold-dark">
-                  🐝 {roomNumber}번 방
+                  📚 {roomNumber}번 방
                 </p>
               </div>
               <button

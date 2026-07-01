@@ -33,7 +33,7 @@ export default function Footer() {
           {/* 매장 정보 */}
           <div>
             <div className="flex items-center gap-2 mb-6">
-              <span className="text-2xl">🐝</span>
+              <span className="text-2xl">📚</span>
               <div>
                 <h3 className="font-serif text-lg font-bold text-cloud">
                   {storeInfo.name}

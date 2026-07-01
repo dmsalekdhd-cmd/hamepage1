@@ -14,7 +14,7 @@ export default function AdminRoomsPage() {
   const getRoomTypeLabel = (type: string) => {
     const labels: Record<string, { label: string; emoji: string }> = {
       honeybee: { label: "허니박스", emoji: "🎬" },
-      cave: { label: "소굴방", emoji: "🐝" },
+      cave: { label: "소굴방", emoji: "🛋️" },
       standard: { label: "일반석", emoji: "📚" },
     };
     return labels[type] || { label: type, emoji: "🏠" };
@@ -206,7 +206,7 @@ export default function AdminRoomsPage() {
                   />
                 </div>
                 <p className="text-[11px] text-ink-light mt-2">
-                  QR코드를 스캔하여 주문하세요 🐝
+                  QR코드를 스캔하여 주문하세요 📚
                 </p>
               </div>
             </div>

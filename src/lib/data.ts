@@ -25,8 +25,8 @@ export const spaces: SpaceInfo[] = [
   {
     title: "소굴방",
     description:
-      "아늑한 벌집 모양의 공간에서 만화책과 함께 편안한 시간을 보내세요.",
-    icon: "🐝",
+      "아늑하고 편안한 공간에서 만화책과 함께 편안한 시간을 보내세요.",
+    icon: "🛋️",
     image_url: "/images/spaces/cave.png",
     features: ["아늑한 공간", "만화책 무제한", "편안한 쿠션", "개인 조명"],
   },
