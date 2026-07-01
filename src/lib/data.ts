@@ -2,8 +2,8 @@ import type { StoreInfo, MenuItem, MenuCategory, Room, SpaceInfo } from "@/types
 
 // ─── 매장 정보 (나중에 직접 수정하세요) ───
 export const storeInfo: StoreInfo = {
-  name: "벌툰만화카페",
-  branch: "경기인천점",
+  name: "만화카페 홈페이지",
+  branch: "만들기 연습용",
   address: "경기도 부천시 원미구 중동로 123, 2층",
   phone: "032-123-4567",
   hours: "매일 10:00 - 02:00 (다음날)",

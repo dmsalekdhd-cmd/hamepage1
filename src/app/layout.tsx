@@ -17,7 +17,7 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "벌툰만화카페 경기인천점 | 몽유도원",
+  title: "만화카페 홈페이지 만들기 연습용",
   description:
     "벌툰만화카페 경기인천점 - 허니박스, 소굴방, 닌텐도존에서 프라이빗한 시간을 보내세요. OTT 무제한, 만화책, 게임, 맛있는 푸드까지!",
   keywords: ["벌툰", "만화카페", "경기", "인천", "허니박스", "소굴방", "데이트", "만화"],
