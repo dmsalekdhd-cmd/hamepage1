@@ -79,10 +79,10 @@ export default function HeroSection() {
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
         >
-          <span className="text-gradient-gold">벌툰</span>
+          <span className="text-gradient-gold">만화카페</span>
           <br />
           <span className="text-3xl sm:text-4xl md:text-5xl font-normal text-cloud/80">
-            만화카페
+            홈페이지
           </span>
         </h1>
 

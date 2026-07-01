@@ -35,7 +35,7 @@ export default function MenuPreview() {
           </h2>
           <div className="ink-divider-gold max-w-[120px] mx-auto mb-6" />
           <p className="text-cloud/50 text-sm md:text-base max-w-lg mx-auto leading-relaxed">
-            벌툰만화카페의 시그니처 메뉴를 만나보세요
+            만화카페의 시그니처 메뉴를 만나보세요
           </p>
         </AnimatedSection>
 

@@ -198,7 +198,7 @@ export const sampleMenuItems: MenuItem[] = [
     id: "item-12",
     category_id: "cat-4",
     name: "허니브레드",
-    description: "달콤한 꿀과 아이스크림을 올린 벌툰 시그니처 디저트",
+    description: "달콤한 꿀과 아이스크림을 올린 만화카페 시그니처 디저트",
     price: 7000,
     image_url: "/images/menu/honey_bread.png",
     is_available: true,

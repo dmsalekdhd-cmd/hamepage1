@@ -39,7 +39,7 @@ export default function AdminLayout({
             <span className="text-2xl">🐝</span>
             <div>
               <h1 className="font-serif text-sm font-bold text-cloud">
-                벌툰만화카페
+                만화카페
               </h1>
               <p className="text-[10px] text-gold/60 tracking-wider">
                 관리자 패널

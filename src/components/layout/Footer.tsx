@@ -125,7 +125,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <span className="text-sm block">KakaoTalk</span>
-                  <span className="text-xs text-cloud/40">벌툰만화카페 채널</span>
+                  <span className="text-xs text-cloud/40">만화카페 채널</span>
                 </div>
               </a>
             </div>

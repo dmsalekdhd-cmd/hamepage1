@@ -192,7 +192,7 @@ export default function AdminRoomsPage() {
 
             <div ref={printRef}>
               <div className="qr-card text-center">
-                <h2 className="text-xs text-ink-light mb-1">벌툰만화카페</h2>
+                <h2 className="text-xs text-ink-light mb-1">만화카페</h2>
                 <h1 className="font-serif text-2xl font-bold text-ink mb-6">
                   {selectedRoom.room_number}번 방
                 </h1>

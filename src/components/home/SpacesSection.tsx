@@ -21,7 +21,7 @@ export default function SpacesSection() {
           </h2>
           <div className="ink-divider max-w-[120px] mx-auto mb-6" />
           <p className="text-ink-light text-sm md:text-base max-w-lg mx-auto leading-relaxed">
-            벌툰만화카페에서 당신만을 위한 아늑하고 특별한 공간을 만나보세요
+            만화카페에서 당신만을 위한 아늑하고 특별한 공간을 만나보세요
           </p>
         </AnimatedSection>
 
