@@ -1,26 +1,370 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* ============================================
+   벌툰만화카페 - 몽유도원 (夢遊桃源) 테마
+   ============================================ */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* 몽유도원 컬러 팔레트 */
+  --color-hanji: #F7F3ED;
+  --color-hanji-dark: #EDE7DB;
+  --color-ink: #2C2620;
+  --color-ink-light: #5C5248;
+  --color-peach: #E8A0BF;
+  --color-peach-light: #F2C4D8;
+  --color-peach-dark: #D4789E;
+  --color-jade: #7BAEA3;
+  --color-jade-light: #A3CEC5;
+  --color-jade-dark: #5A9189;
+  --color-gold: #C9A96E;
+  --color-gold-light: #DFC99A;
+  --color-gold-dark: #A8884E;
+  --color-night: #1A1A2E;
+  --color-night-light: #2D2D44;
+  --color-night-lighter: #3D3D5C;
+  --color-cloud: #FFFFFF;
+  --color-mist: rgba(247, 243, 237, 0.85);
+
+  /* 폰트 */
+  --font-serif: 'Noto Serif KR', serif;
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* 커스텀 애니메이션 */
+  --animate-fade-in: fade-in 0.8s ease-out forwards;
+  --animate-fade-up: fade-up 0.8s ease-out forwards;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-shimmer: shimmer 3s ease-in-out infinite;
+  --animate-ink-spread: ink-spread 1.2s ease-out forwards;
+  --animate-petal-fall: petal-fall 8s ease-in-out infinite;
+  --animate-slide-up: slide-up 0.5s ease-out forwards;
+  --animate-slide-down: slide-down 0.3s ease-out forwards;
+  --animate-pulse-soft: pulse-soft 2s ease-in-out infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ============================================
+   한지 질감 배경
+   ============================================ */
+.bg-hanji-texture {
+  background-color: var(--color-hanji);
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(200, 180, 150, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(200, 180, 150, 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, rgba(200, 180, 150, 0.05) 0%, transparent 50%);
+}
+
+.bg-night-texture {
+  background-color: var(--color-night);
+  background-image:
+    radial-gradient(ellipse at 20% 30%, rgba(123, 174, 163, 0.05) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 70%, rgba(232, 160, 191, 0.04) 0%, transparent 50%);
+}
+
+/* ============================================
+   글래스모피즘 카드 (한지 느낌)
+   ============================================ */
+.glass-hanji {
+  background: rgba(247, 243, 237, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 169, 110, 0.15);
+  box-shadow: 0 8px 32px rgba(44, 38, 32, 0.06);
+}
+
+.glass-dark {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(201, 169, 110, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================================
+   수묵화 스타일 구분선
+   ============================================ */
+.ink-divider {
+  height: 2px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(44, 38, 32, 0.15) 20%,
+    rgba(44, 38, 32, 0.3) 50%,
+    rgba(44, 38, 32, 0.15) 80%,
+    transparent 100%
+  );
+}
+
+.ink-divider-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(201, 169, 110, 0.2) 20%,
+    rgba(201, 169, 110, 0.5) 50%,
+    rgba(201, 169, 110, 0.2) 80%,
+    transparent 100%
+  );
+}
+
+/* ============================================
+   키프레임 애니메이션
+   ============================================ */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+@keyframes ink-spread {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10%) rotate(0deg);
+    opacity: 0;
+  }
+  10% { opacity: 0.8; }
+  90% { opacity: 0.6; }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+/* ============================================
+   스크롤바 커스텀
+   ============================================ */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-hanji);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gold);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold-dark);
+}
+
+/* ============================================
+   기본 바디 스타일
+   ============================================ */
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-hanji);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+}
+
+/* ============================================
+   텍스트 유틸리티
+   ============================================ */
+.text-gradient-gold {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-light) 50%, var(--color-gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-peach {
+  background: linear-gradient(135deg, var(--color-peach) 0%, var(--color-peach-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ============================================
+   버튼 호버 효과
+   ============================================ */
+.btn-peach {
+  background: linear-gradient(135deg, var(--color-peach) 0%, var(--color-peach-dark) 100%);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(232, 160, 191, 0.3);
+}
+.btn-peach:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(232, 160, 191, 0.45);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--color-gold) 0%, var(--color-gold-dark) 100%);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(201, 169, 110, 0.3);
+}
+.btn-gold:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(201, 169, 110, 0.45);
+}
+
+.btn-jade {
+  background: linear-gradient(135deg, var(--color-jade) 0%, var(--color-jade-dark) 100%);
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(123, 174, 163, 0.3);
+}
+.btn-jade:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(123, 174, 163, 0.45);
+}
+
+/* ============================================
+   카드 호버 효과
+   ============================================ */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(44, 38, 32, 0.12);
+}
+
+/* ============================================
+   Intersection Observer 기반 Fade-in
+   ============================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================
+   꽃잎 파티클
+   ============================================ */
+.petal {
+  position: fixed;
+  pointer-events: none;
+  z-index: 50;
+  opacity: 0;
+  animation: petal-fall 8s ease-in-out infinite;
+}
+
+/* ============================================
+   카카오톡 / 인스타그램 플로팅 버튼
+   ============================================ */
+.floating-sns {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.floating-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.floating-btn:hover {
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.2);
+}
+
+.floating-btn-kakao {
+  background: #FEE500;
+  color: #191919;
+}
+
+.floating-btn-instagram {
+  background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+  color: white;
+}
+
+/* ============================================
+   주문 상태 배지
+   ============================================ */
+.status-pending {
+  background: rgba(201, 169, 110, 0.15);
+  color: var(--color-gold-dark);
+  border: 1px solid rgba(201, 169, 110, 0.3);
+}
+
+.status-preparing {
+  background: rgba(232, 160, 191, 0.15);
+  color: var(--color-peach-dark);
+  border: 1px solid rgba(232, 160, 191, 0.3);
+}
+
+.status-served {
+  background: rgba(123, 174, 163, 0.15);
+  color: var(--color-jade-dark);
+  border: 1px solid rgba(123, 174, 163, 0.3);
+}
+
+.status-cancelled {
+  background: rgba(44, 38, 32, 0.08);
+  color: var(--color-ink-light);
+  border: 1px solid rgba(44, 38, 32, 0.15);
 }
